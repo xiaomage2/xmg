@@ -8,14 +8,29 @@
         <version>2.1.5.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.xmg</groupId>
     <artifactId>xmg</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>xmg</name>
-    <description>Demo project for Spring Boot</description>
+    <description>xmg freamework build</description>
 
     <properties>
         <java.version>1.8</java.version>
+        <xmg.version>0.0.1</xmg.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <swagger.version>2.7.0</swagger.version>
+        <druid.version>1.1.14</druid.version>
+        <mybatis.boot.version>1.3.2</mybatis.boot.version>
+
+        <!--自己写的模块放最后-->
+        <xmg-common.version>0.0.1</xmg-common.version>
+        <xmg-core.version>0.0.1</xmg-core.version>
+        <xmg-generator.version>0.0.1</xmg-generator.version>
+        <xmg-system.version>0.0.1</xmg-system.version>
+        <xmg-wechat.version>0.0.1</xmg-wechat.version>
     </properties>
 
     <dependencies>
@@ -29,6 +44,59 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <!-- swagger2-->
+        <dependency>
+            <groupId>io.springfox</groupId>
+            <artifactId>springfox-swagger2</artifactId>
+            <version>${swagger.version}</version>
+        </dependency>
+
+        <!--阿里数据库连接池 -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${druid.version}</version>
+        </dependency>
+
+        <!--    自己写的模块放到最后    -->
+        <!--通用工具 -->
+        <dependency>
+            <groupId>com.xmg</groupId>
+            <artifactId>xmg-common</artifactId>
+            <version>${xmg-common.version}</version>
+        </dependency>
+
+        <!--核心模块 -->
+        <dependency>
+            <groupId>com.xmg</groupId>
+            <artifactId>xmg-core</artifactId>
+            <version>${xmg-core.version}</version>
+        </dependency>
+
+        <!--代码生成 -->
+        <dependency>
+            <groupId>com.xmg</groupId>
+            <artifactId>xmg-generator</artifactId>
+            <version>${xmg-generator.version}</version>
+        </dependency>
+
+        <!--系统平台 -->
+        <dependency>
+            <groupId>com.xmg</groupId>
+            <artifactId>xmg-system</artifactId>
+            <version>${xmg-system.version}</version>
+        </dependency>
+
+        <!--微信 -->
+        <dependency>
+            <groupId>com.xmg</groupId>
+            <artifactId>xmg-wechat</artifactId>
+            <version>${xmg-wechat.version}</version>
+        </dependency>
+
+
+
     </dependencies>
 
     <build>
@@ -39,5 +107,6 @@
             </plugin>
         </plugins>
     </build>
+
 
 </project>
